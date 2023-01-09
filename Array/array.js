@@ -34,27 +34,44 @@ console.log(areas)
 */
 
 // filter
-let cities = [
-    {name: 'Los Angeles', population: 3792621},
-    {name: 'New York', population: 8175133},
-    {name: 'Chicago', population: 2695598},
-    {name: 'Houston', population: 2099451},
-    {name: 'Philadelphia', population: 1526006}
-];
+// let cities = [
+//     {name: 'Los Angeles', population: 3792621},
+//     {name: 'New York', population: 8175133},
+//     {name: 'Chicago', population: 2695598},
+//     {name: 'Houston', population: 2099451},
+//     {name: 'Philadelphia', population: 1526006}
+// ];
 
-let bigcities = []
+// let bigcities = []
 
-for(let i = 0; i < cities.length; i++){
-    if(cities[i].population > 3000000){
-        bigcities.push(cities[i])
-    }
+// for(let i = 0; i < cities.length; i++){
+//     if(cities[i].population > 3000000){
+//         bigcities.push(cities[i])
+//     }
+// }
+
+// function findCities(cities){
+//     return cities.population > 3000000;
+// }
+
+// let resultCities = cities.filter(findCities)
+
+// console.log(resultCities)
+// console.log(bigcities)
+
+// reduce
+
+let num = [1,2,3];
+
+let sum = 0;;
+for(let i = 0 ; i < num.length; i++){
+  sum = sum + num[i]
 }
 
-function findCities(cities){
-    return cities.population > 3000000;
-}
+let result = num.reduce((previousValue, currentValue)=>{
+   return previousValue + currentValue;
+})
 
-let resultCities = cities.filter(findCities)
+console.log(result)
 
-console.log(resultCities)
-console.log(bigcities)
+// console.log(sum)
