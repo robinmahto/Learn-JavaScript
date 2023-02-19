@@ -11,4 +11,13 @@ function sum(){
     console.log("printed")
 }
 
-setInterval(sum, 2000)
+const asyncHandler = (fun)=> async(req, res, next)=>{
+    try {
+        await fun(req, res, next)
+    } catch (error) {
+        throw error
+    }
+}
+
+asyncHandler(sum)
+// setInterval(sum, 2000)
